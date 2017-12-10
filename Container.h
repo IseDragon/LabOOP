@@ -26,5 +26,7 @@ public:
 	void Clear();
 	void In(ifstream & f1);
 	void Out(ofstream & f2);
+	void OutFeature(ofstream & f2);
+	void OutCartoon(ofstream & f2);
 };
 #endif
