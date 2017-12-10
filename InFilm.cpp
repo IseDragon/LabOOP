@@ -5,6 +5,7 @@
 #include "Film.h"
 #include "Feature.h"
 #include "Cartoon.h"
+#include "Documental.h"
 
 using namespace std;
 
@@ -18,6 +19,9 @@ film* film::In(ifstream &ifst) {
 		break;
 	case 2:
 		f = new cartoon;
+		break;
+	case 3:
+		f = new documental;
 		break;
 	default:
 		return 0;
