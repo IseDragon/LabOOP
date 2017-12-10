@@ -8,4 +8,5 @@ using namespace std;
 
 void film::Out(ofstream &ofst) {
 	ofst << name << endl;
+	ofst << "It was filmed in " << country << endl;
 }

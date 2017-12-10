@@ -10,4 +10,5 @@ void film::InData(ifstream &ifst) {
 	char t[256];
 	ifst.getline(t, 256);
 	ifst.getline(name, 256);
+	ifst.getline(country, 256);
 }
