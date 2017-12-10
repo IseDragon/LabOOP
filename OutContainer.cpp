@@ -17,6 +17,7 @@ void container::Out(ofstream &ofst)
 			while (mas[i])
 			{
 				mas[i]->f->Out(ofst);
+				ofst << "Number of vowels = " << mas[i]->f->FuncFilm() << endl;
 				mas[i] = mas[i]->next;
 			}
 		}

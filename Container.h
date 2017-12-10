@@ -28,5 +28,6 @@ public:
 	void Out(ofstream & f2);
 	void OutFeature(ofstream & f2);
 	void OutCartoon(ofstream & f2);
+	void Sort();
 };
 #endif

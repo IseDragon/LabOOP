@@ -19,5 +19,7 @@ public:
 	virtual void OutFeature(ofstream &ofst);
 	virtual void OutCartoon(ofstream &ofst);
 	int SumElementsOfString(int n);
+	int FuncFilm();
+	bool Compare(film* f2);
 };
 #endif
