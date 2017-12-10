@@ -10,6 +10,7 @@ using namespace std;
 class film {
 public:
 	char name[256];
+	char country[256];
 	// идентификация, порождение и ввод фигуры из потока
 public:
 	static film* In(ifstream &ifst);
