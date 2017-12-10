@@ -18,6 +18,7 @@ public:
 	virtual void Out(ofstream &ofst) = 0;    // вывод
 	virtual void OutFeature(ofstream &ofst);
 	virtual void OutCartoon(ofstream &ofst);
+	virtual void OutDocumental(ofstream &ofst);
 	int SumElementsOfString(int n);
 	int FuncFilm();
 	bool Compare(film* f2);
