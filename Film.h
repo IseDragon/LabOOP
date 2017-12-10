@@ -17,5 +17,6 @@ public:
 	virtual void Out(ofstream &ofst) = 0;    // вывод
 	int SumElementsOfString(int n);
 	int FuncFilm();
+	bool Compare(film* f2);
 };
 #endif
