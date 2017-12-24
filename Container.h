@@ -16,11 +16,10 @@ struct node
 };
 class container
 {
-private:
+public:
 	int kol;
 	int n;
 	node** mas;
-public:
 	container();
 	~container() { Clear(); };
 	void Clear();
