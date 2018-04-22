@@ -8,7 +8,7 @@ using namespace std;
 
 void CheckOutputFile(ostream &ofst);
 
-void feature::Out(ofstream &ofst)
+void feature::Out(ostream &ofst)
 {
 	CheckOutputFile(ofst);
 	film::Out(ofst);

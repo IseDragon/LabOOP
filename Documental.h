@@ -14,12 +14,12 @@ class documental : public film
 		int year;
 		// переопредел€ем интерфейс класса
 		void InData(ifstream &ifst);  // ввод 
-		void Out(ofstream &ofst);     // вывод 
-		void OutDocumental(ofstream &ofst);     // вывод 
-		void MultiMethod(film* Other, ofstream &ofst);
-		void MMCartoon(ofstream &OutFile);
-		void MMFeature(ofstream &OutFile);
-		void MMDocumental(ofstream &OutFile);
+		void Out(ostream &ofst);     // вывод 
+		void OutDocumental(ostream &ofst);     // вывод 
+		void MultiMethod(film* Other, ostream &ofst);
+		void MMCartoon(ostream &OutFile);
+		void MMFeature(ostream &OutFile);
+		void MMDocumental(ostream &OutFile);
 		documental() {} // создание без инициализации.
 };
 #endif

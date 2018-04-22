@@ -8,7 +8,7 @@ using namespace std;
 
 void CheckOutputFile(ostream &ofst);
 
-void film::OutDocumental(ofstream &ofst)
+void film::OutDocumental(ostream &ofst)
 {
 	CheckOutputFile(ofst);
 	ofst << endl;

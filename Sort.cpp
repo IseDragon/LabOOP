@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void container::Sort()
+void container::Sort(int d)
 {
 	for (int k = 0; k<n; k++)
 	{
@@ -24,26 +24,57 @@ void container::Sort()
 			Node = mas[k];
 			for (int j = i + 1; j < Koli; j++)
 			{
-				if (Node->f->Compare(Node->next->f))
+				switch (d)
 				{
-					node* next = Node->next;
-					Node->next = Node->next->next;
-					next->next = Node;
-					if (Node == mas[k])
+				case 0:
+					if (Node->f->Compare(Node->next->f))
 					{
-						mas[k] = next;
-						prev = next;
+						node* next = Node->next;
+						Node->next = Node->next->next;
+						next->next = Node;
+						if (Node == mas[k])
+						{
+							mas[k] = next;
+							prev = next;
+						}
+						else
+						{
+							prev->next = next;
+							prev = next;
+						}
 					}
 					else
 					{
-						prev->next = next;
-						prev = next;
+						prev = Node;
+						Node = Node->next;
 					}
-				}
-				else
-				{
-					prev = Node;
-					Node = Node->next;
+					break;
+				case 1:
+					if (!Node->f->Compare(Node->next->f))
+					{
+						node* next = Node->next;
+						Node->next = Node->next->next;
+						next->next = Node;
+						if (Node == mas[k])
+						{
+							mas[k] = next;
+							prev = next;
+						}
+						else
+						{
+							prev->next = next;
+							prev = next;
+						}
+					}
+					else
+					{
+						prev = Node;
+						Node = Node->next;
+					}
+					break;
+				default:
+					cerr << "Inknown d in sort function!" << endl;
+					exit(1);
 				}
 			}
 		}

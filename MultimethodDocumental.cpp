@@ -6,19 +6,19 @@
 
 using namespace std;
 
-void documental::MMCartoon(ofstream &OutFile)
+void documental::MMCartoon(ostream &OutFile)
 {
 	OutFile << "\nCartoon and Documental" << endl;
 }
-void documental::MMFeature(ofstream &OutFile)
+void documental::MMFeature(ostream &OutFile)
 {
 	OutFile << "\nFeature and Documental" << endl;
 }
-void documental::MMDocumental(ofstream &OutFile)
+void documental::MMDocumental(ostream &OutFile)
 {
 	OutFile << "\nDocumental and Documental" << endl;
 }
-void documental::MultiMethod(film* Other, ofstream  &OutFile)
+void documental::MultiMethod(film* Other, ostream  &OutFile)
 {
 	Other->MMDocumental(OutFile);
 }

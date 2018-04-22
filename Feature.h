@@ -13,12 +13,12 @@ class feature : public film
 	public:
 		char director[256];
 		void InData(ifstream &ifst);  // ввод 
-		void Out(ofstream &ofst);     // вывод 
-		void OutFeature(ofstream &ofst);     // вывод 
-		void MultiMethod(film* Other, ofstream &ofst);
-		void MMCartoon(ofstream &OutFile);
-		void MMFeature(ofstream &OutFile);
-		void MMDocumental(ofstream &OutFile);
+		void Out(ostream &ofst);     // вывод 
+		void OutFeature(ostream &ofst);     // вывод 
+		void MultiMethod(film* Other, ostream &ofst);
+		void MMCartoon(ostream &OutFile);
+		void MMFeature(ostream &OutFile);
+		void MMDocumental(ostream &OutFile);
 		feature() {} // создание без инициализации.
 };
 #endif

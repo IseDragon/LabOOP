@@ -16,14 +16,14 @@ class film
 	public:
 		static film* In(ifstream &ifst);
 		virtual void InData(ifstream &ifst) = 0; // ввод
-		virtual void Out(ofstream &ofst) = 0;    // вывод
-		virtual void OutFeature(ofstream &ofst);
-		virtual void OutCartoon(ofstream &ofst);
-		virtual void OutDocumental(ofstream &ofst);
-		virtual void MultiMethod(film* Other, ofstream &ofst) = 0;
-		virtual void MMCartoon(ofstream &OutFile) = 0;
-		virtual void MMFeature(ofstream &OutFile) = 0;
-		virtual void MMDocumental(ofstream &OutFile) = 0;
+		virtual void Out(ostream &ofst) = 0;    // вывод
+		virtual void OutFeature(ostream &ofst);
+		virtual void OutCartoon(ostream &ofst);
+		virtual void OutDocumental(ostream &ofst);
+		virtual void MultiMethod(film* Other, ostream &ofst) = 0;
+		virtual void MMCartoon(ostream &OutFile) = 0;
+		virtual void MMFeature(ostream &OutFile) = 0;
+		virtual void MMDocumental(ostream &OutFile) = 0;
 		int SumElementsOfString(int n);
 		int FuncFilm();
 		bool Compare(film* f2);

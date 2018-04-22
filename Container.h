@@ -23,11 +23,12 @@ class container
 		~container() { Clear(); };
 		void Clear();
 		void In(ifstream & f1);
-		void Out(ofstream & f2);
-		void MultiMethod(ofstream & f2);
-		void OutFeature(ofstream & f2);
-		void OutCartoon(ofstream & f2);
-		void OutDocumental(ofstream & f2);
-		void Sort();
+		void Out(ostream & f2);
+		void OutCont(ostream & f2);
+		void MultiMethod(ostream & f2);
+		void OutFeature(ostream & f2);
+		void OutCartoon(ostream & f2);
+		void OutDocumental(ostream & f2);
+		void Sort(int d);
 };
 #endif

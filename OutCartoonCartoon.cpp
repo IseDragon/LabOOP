@@ -8,7 +8,7 @@ using namespace std;
 
 void CheckOutputFile(ostream &ofst);
 
-void cartoon::OutCartoon(ofstream &ofst) 
+void cartoon::OutCartoon(ostream &ofst) 
 {
 	CheckOutputFile(ofst);
 	Out(ofst);

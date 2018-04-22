@@ -3,8 +3,6 @@
 #include <stdlib.h>
 #include <fstream>
 #include <iostream>
-#include "gtest/gtest.h"
-#include "Test.h"
 #include "Protect.h"
 
 using namespace std;
@@ -27,12 +25,63 @@ int main(int argc, char* argv[])
 	container c;
 
 	c.In(ifst);
-	ofst << "Filled container. " << endl;
-	c.MultiMethod(ofst);
+	int k1 = 10;
+	int menu = 10;
+	while (menu != 0) {
 
-	c.Clear();
-	ofst << "Empty container. " << endl;
-	
+		cout << "Input number:" << endl;
+		cout << "1 - Sort container" << endl;
+		cout << "2 - Out container" << endl;
+		cout << "3 - Multimethod" << endl;
+		cout << "4 - Clear container" << endl;
+		cout << "0 - exit" << endl;
+		cin >> menu;
+		if (cout.fail())
+		{
+			cout << "Wrong input!" << endl;
+			exit(1);
+		}
+		if (menu < 0 || menu > 4) {
+			cout << "Incorrect choice! Try again!" << endl;
+			continue;
+		}
+		else {
+			switch (menu)
+			{
+			case 1:
+				cout << "Input number:" << endl;
+				cout << "0 - from small to big" << endl;
+				cout << "1 - from big to small" << endl;
+				while (k1 != 0 && k1 != 1)
+				{
+					cin >> k1;
+					if (cout.fail())
+					{
+						cout << "Wrong input!" << endl;
+						exit(1);
+					}
+					if (k1 != 0 && k1 != 1)
+					{
+						cout << "Incorrect choice! Try again!" << endl;
+						continue;
+					}
+				}
+				c.Sort(k1);
+				break;
+			case 2:
+				c.OutCont(ofst);
+				break;
+			case 3:
+				c.MultiMethod(ofst);
+				break;
+			case 4:
+				c.Clear();
+				break;
+			default:
+				break;
+			}
+		}
+	}
 	cout << "Stop" << endl;
 	return 0;
 	//::testing::InitGoogleTest(&argc, argv);

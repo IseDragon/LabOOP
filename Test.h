@@ -28,7 +28,7 @@ TEST_F(CartoonTest, CheckInput)
 
 TEST_F(CartoonTest, CheckOutput) 
 {
-	ofstream ofst("OutTest.txt");
+	ostream ofst("OutTest.txt");
 	cartoon c;
 	c.t = cartoon::type::PAINTED;
 	strcpy_s(c.name, "Frozen");
@@ -66,7 +66,7 @@ TEST_F(DocumentalTest, CheckInput)
 
 TEST_F(DocumentalTest, CheckOutput) 
 {
-	ofstream ofst("OutTest.txt");
+	ostream ofst("OutTest.txt");
 	documental d;
 	d.year = 1;
 	strcpy_s(d.name, "Wildlife");
@@ -104,7 +104,7 @@ TEST_F(FeatureTest, CheckInput)
 
 TEST_F(FeatureTest, CheckOutput)
 {
-	ofstream ofst("OutTest.txt");
+	ostream ofst("OutTest.txt");
 	feature f;
 	strcpy_s(f.name, "Kill Bill");
 	strcpy_s(f.country, "USA");
@@ -170,7 +170,7 @@ TEST_F(FilmTest, CheckInputFeature)
 
 TEST_F(FilmTest, CheckOutputCartoon)
 {
-	ofstream ofst("OutTest.txt");
+	ostream ofst("OutTest.txt");
 
 	cartoon c;
 	strcpy_s(c.name, "Frozen");
@@ -186,7 +186,7 @@ TEST_F(FilmTest, CheckOutputCartoon)
 
 TEST_F(FilmTest, CheckOutputDocumental)
 {
-	ofstream ofst("OutTest.txt");
+	ostream ofst("OutTest.txt");
 
 	documental d;
 	strcpy_s(d.name, "Wildlife");
@@ -202,7 +202,7 @@ TEST_F(FilmTest, CheckOutputDocumental)
 
 TEST_F(FilmTest, CheckOutputFeature)
 {
-	ofstream ofst("OutTest.txt");
+	ostream ofst("OutTest.txt");
 
 	feature f;
 	strcpy_s(f.name, "Kill Bill");
@@ -312,7 +312,7 @@ TEST_F(ContainerTest, CheckClearContainer)
 
 TEST_F(ContainerTest, CheckOutCartoon) 
 {
-	ofstream ofst("OutTest.txt");
+	ostream ofst("OutTest.txt");
 
 	container c;
 	c.kol = 3;
@@ -389,7 +389,7 @@ TEST_F(ContainerTest, CheckOutCartoon)
 
 TEST_F(ContainerTest, CheckOutDocumental)
 {
-	ofstream ofst("OutTest.txt");
+	ostream ofst("OutTest.txt");
 
 	container c;
 	c.kol = 3;
@@ -466,7 +466,7 @@ TEST_F(ContainerTest, CheckOutDocumental)
 
 TEST_F(ContainerTest, CheckOutFeature) 
 {
-	ofstream ofst("OutTest.txt");
+	ostream ofst("OutTest.txt");
 
 	container c;
 	c.kol = 3;
@@ -543,7 +543,7 @@ TEST_F(ContainerTest, CheckOutFeature)
 
 TEST_F(ContainerTest, CheckSort)
 {
-	ofstream ofst("OutTest.txt");
+	ostream ofst("OutTest.txt");
 
 	container c;
 	c.kol = 3;
@@ -621,7 +621,7 @@ TEST_F(ContainerTest, CheckSort)
 
 TEST_F(ContainerTest, CheckOut)
 {
-	ofstream ofst("OutTest.txt");
+	ostream ofst("OutTest.txt");
 
 	container c;
 	c.kol = 3;
