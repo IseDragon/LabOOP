@@ -6,7 +6,10 @@
 
 using namespace std;
 
+void CheckOutputFile(ostream &ofst);
+
 void film::Out(ofstream &ofst) {
+	CheckOutputFile(ofst);
 	ofst << name << endl;
 	ofst << "It was filmed in " << country << endl;
 }

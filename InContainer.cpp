@@ -6,9 +6,18 @@
 
 using namespace std;
 
+void CheckInputFile(ifstream &ifst);
+void CheckWrongInput(ifstream &ifst);
+
 void container::In(ifstream &ifst)
 {
+	CheckInputFile(ifst);
 	ifst >> kol;
+	CheckWrongInput(ifst);
+	if (kol < 0) {
+		cerr << "Wrong number of films" << endl;
+		exit(1);
+	}
 	for (int i = 0; i<kol; i++)
 	{
 		film *f;

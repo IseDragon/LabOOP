@@ -6,6 +6,9 @@
 
 using namespace std;
 
+void CheckOutputFile(ostream &ofst);
+
 void feature::OutFeature(ofstream &ofst) {
+	CheckOutputFile(ofst);
 	Out(ofst);
 }

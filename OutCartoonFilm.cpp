@@ -6,6 +6,9 @@
 
 using namespace std;
 
+void CheckOutputFile(ostream &ofst);
+
 void film::OutCartoon(ofstream &ofst) {
+	CheckOutputFile(ofst);
 	ofst << endl;
 }

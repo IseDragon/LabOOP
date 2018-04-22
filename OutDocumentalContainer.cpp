@@ -6,8 +6,11 @@
 
 using namespace std;
 
+void CheckOutputFile(ostream &ofst);
+
 void container::OutDocumental(ofstream &ofst)
 {
+	CheckOutputFile(ofst);
 	ofst << "Container contains " << kol << " elements." << endl;
 	for (int i = 0; i<n; i++)
 	{
