@@ -20,6 +20,10 @@ class film
 		virtual void OutFeature(ofstream &ofst);
 		virtual void OutCartoon(ofstream &ofst);
 		virtual void OutDocumental(ofstream &ofst);
+		virtual void MultiMethod(film* Other, ofstream &ofst) = 0;
+		virtual void MMCartoon(ofstream &OutFile) = 0;
+		virtual void MMFeature(ofstream &OutFile) = 0;
+		virtual void MMDocumental(ofstream &OutFile) = 0;
 		int SumElementsOfString(int n);
 		int FuncFilm();
 		bool Compare(film* f2);

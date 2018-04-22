@@ -16,6 +16,10 @@ class cartoon : public film
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst);  // ввод 
 		void Out(ofstream &ofst);     // вывод 
+		void MultiMethod(film* Other, ofstream &ofst); 
+		void MMCartoon(ofstream &OutFile);
+		void MMFeature(ofstream &OutFile);
+		void MMDocumental(ofstream &OutFile);
 		void OutCartoon(ofstream &ofst);     // вывод 
 		cartoon() {} // создание без инициализации.
 };

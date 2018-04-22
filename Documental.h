@@ -16,6 +16,10 @@ class documental : public film
 		void InData(ifstream &ifst);  // ввод 
 		void Out(ofstream &ofst);     // вывод 
 		void OutDocumental(ofstream &ofst);     // вывод 
+		void MultiMethod(film* Other, ofstream &ofst);
+		void MMCartoon(ofstream &OutFile);
+		void MMFeature(ofstream &OutFile);
+		void MMDocumental(ofstream &OutFile);
 		documental() {} // создание без инициализации.
 };
 #endif
