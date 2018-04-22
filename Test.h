@@ -10,7 +10,8 @@ using namespace std;
 class CartoonTest : public ::testing::Test {
 };
 
-TEST_F(CartoonTest, CheckInput) {
+TEST_F(CartoonTest, CheckInput) 
+{
 	ifstream ifst("InCartoon.txt");
 	cartoon actual;
 	actual.InData(ifst);
@@ -25,7 +26,8 @@ TEST_F(CartoonTest, CheckInput) {
 	ASSERT_STREQ(actual.country, c.country);
 }
 
-TEST_F(CartoonTest, CheckOutput) {
+TEST_F(CartoonTest, CheckOutput) 
+{
 	ofstream ofst("OutTest.txt");
 	cartoon c;
 	c.t = cartoon::type::PAINTED;
@@ -46,7 +48,8 @@ TEST_F(CartoonTest, CheckOutput) {
 class DocumentalTest : public ::testing::Test {
 };
 
-TEST_F(DocumentalTest, CheckInput) {
+TEST_F(DocumentalTest, CheckInput) 
+{
 	ifstream ifst("InDocumental.txt");
 	documental actual;
 	actual.InData(ifst);
@@ -61,7 +64,8 @@ TEST_F(DocumentalTest, CheckInput) {
 	ASSERT_STREQ(actual.country, d.country);
 }
 
-TEST_F(DocumentalTest, CheckOutput) {
+TEST_F(DocumentalTest, CheckOutput) 
+{
 	ofstream ofst("OutTest.txt");
 	documental d;
 	d.year = 1;
@@ -82,7 +86,8 @@ TEST_F(DocumentalTest, CheckOutput) {
 class FeatureTest : public ::testing::Test {
 };
 
-TEST_F(FeatureTest, CheckInput) {
+TEST_F(FeatureTest, CheckInput)
+{
 	ifstream ifst("InFeature.txt");
 	feature actual;
 	actual.InData(ifst);
@@ -97,7 +102,8 @@ TEST_F(FeatureTest, CheckInput) {
 	ASSERT_STREQ(actual.director, f.director);
 }
 
-TEST_F(FeatureTest, CheckOutput) {
+TEST_F(FeatureTest, CheckOutput)
+{
 	ofstream ofst("OutTest.txt");
 	feature f;
 	strcpy_s(f.name, "Kill Bill");
@@ -118,7 +124,8 @@ TEST_F(FeatureTest, CheckOutput) {
 class FilmTest : public ::testing::Test {
 };
 
-TEST_F(FilmTest, CheckInputCartoon) {
+TEST_F(FilmTest, CheckInputCartoon) 
+{
 	ifstream ifst("FilmInCartoon.txt");
 	
 	film *actual = film::In(ifst);
@@ -132,7 +139,8 @@ TEST_F(FilmTest, CheckInputCartoon) {
 	ASSERT_STREQ(actual->country, c.country);
 }
 
-TEST_F(FilmTest, CheckInputDocumental) {
+TEST_F(FilmTest, CheckInputDocumental)
+{
 	ifstream ifst("FilmInDocumental.txt");
 	film *actual = film::In(ifst);
 
@@ -146,7 +154,8 @@ TEST_F(FilmTest, CheckInputDocumental) {
 }
 
 
-TEST_F(FilmTest, CheckInputFeature) {
+TEST_F(FilmTest, CheckInputFeature)
+{
 	ifstream ifst("FilmInFeature.txt");
 	film *actual = film::In(ifst);
 
@@ -159,7 +168,8 @@ TEST_F(FilmTest, CheckInputFeature) {
 	ASSERT_STREQ(actual->country, expected.country);
 }
 
-TEST_F(FilmTest, CheckOutputCartoon) {
+TEST_F(FilmTest, CheckOutputCartoon)
+{
 	ofstream ofst("OutTest.txt");
 
 	cartoon c;
@@ -174,7 +184,8 @@ TEST_F(FilmTest, CheckOutputCartoon) {
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(FilmTest, CheckOutputDocumental) {
+TEST_F(FilmTest, CheckOutputDocumental)
+{
 	ofstream ofst("OutTest.txt");
 
 	documental d;
@@ -189,7 +200,8 @@ TEST_F(FilmTest, CheckOutputDocumental) {
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(FilmTest, CheckOutputFeature) {
+TEST_F(FilmTest, CheckOutputFeature)
+{
 	ofstream ofst("OutTest.txt");
 
 	feature f;
@@ -205,20 +217,23 @@ TEST_F(FilmTest, CheckOutputFeature) {
 }
 
 
-TEST_F(FilmTest, CheckFunc) {
+TEST_F(FilmTest, CheckFunc) 
+{
 	cartoon c;
 	strcpy_s(c.name, "Kill Bill");
 	ASSERT_EQ(c.FuncFilm(), 2);
 }
 
 
-TEST_F(FilmTest, CheckZeroFunc) {
+TEST_F(FilmTest, CheckZeroFunc) 
+{
 	cartoon c;
 	strcpy_s(c.name, "KLB");
 	ASSERT_EQ(c.FuncFilm(), 0);
 }
 
-TEST_F(FilmTest, CheckCompare) {
+TEST_F(FilmTest, CheckCompare) 
+{
 	cartoon c1;
 	film* c2 = new cartoon;
 	strcpy_s(c1.name, "Kill Bill");
@@ -227,13 +242,15 @@ TEST_F(FilmTest, CheckCompare) {
 	ASSERT_TRUE(c1.Compare(c2));
 }
 
-TEST_F(FilmTest, CheckSumElem) {
+TEST_F(FilmTest, CheckSumElem)
+{
 	cartoon c;
 	strcpy_s(c.name, "Kill Bill");
 	ASSERT_EQ(c.SumElementsOfString(10), 5);
 }
 
-TEST_F(FilmTest, CheckZeroSumElem) {
+TEST_F(FilmTest, CheckZeroSumElem)
+{
 	cartoon c;
 	strcpy_s(c.name, "");
 	ASSERT_EQ(c.SumElementsOfString(10), 0);
@@ -245,7 +262,8 @@ TEST_F(FilmTest, CheckZeroSumElem) {
 class ContainerTest : public ::testing::Test {
 };
 
-TEST_F(ContainerTest, CheckInitContainer) {
+TEST_F(ContainerTest, CheckInitContainer) 
+{
 
 	container c;
 	
@@ -257,7 +275,8 @@ TEST_F(ContainerTest, CheckInitContainer) {
 	}
 }
 
-TEST_F(ContainerTest, CheckClearEmptyContainer) {
+TEST_F(ContainerTest, CheckClearEmptyContainer)
+{
 
 	container c;
 
@@ -270,7 +289,8 @@ TEST_F(ContainerTest, CheckClearEmptyContainer) {
 	}
 }
 
-TEST_F(ContainerTest, CheckClearContainer) {
+TEST_F(ContainerTest, CheckClearContainer) 
+{
 	container c;
 
 	film *f = new cartoon;
@@ -290,7 +310,8 @@ TEST_F(ContainerTest, CheckClearContainer) {
 	}
 }
 
-TEST_F(ContainerTest, CheckOutCartoon) {
+TEST_F(ContainerTest, CheckOutCartoon) 
+{
 	ofstream ofst("OutTest.txt");
 
 	container c;
@@ -366,7 +387,8 @@ TEST_F(ContainerTest, CheckOutCartoon) {
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ContainerTest, CheckOutDocumental) {
+TEST_F(ContainerTest, CheckOutDocumental)
+{
 	ofstream ofst("OutTest.txt");
 
 	container c;
@@ -442,7 +464,8 @@ TEST_F(ContainerTest, CheckOutDocumental) {
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ContainerTest, CheckOutFeature) {
+TEST_F(ContainerTest, CheckOutFeature) 
+{
 	ofstream ofst("OutTest.txt");
 
 	container c;
@@ -518,7 +541,8 @@ TEST_F(ContainerTest, CheckOutFeature) {
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ContainerTest, CheckSort) {
+TEST_F(ContainerTest, CheckSort)
+{
 	ofstream ofst("OutTest.txt");
 
 	container c;
@@ -595,7 +619,8 @@ TEST_F(ContainerTest, CheckSort) {
 	ASSERT_TRUE(flag);
 }
 
-TEST_F(ContainerTest, CheckOut) {
+TEST_F(ContainerTest, CheckOut)
+{
 	ofstream ofst("OutTest.txt");
 
 	container c;

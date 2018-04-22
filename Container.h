@@ -8,7 +8,6 @@
 
 using namespace std;
 
-using namespace std;
 struct node
 {
 	film *f;
@@ -16,18 +15,18 @@ struct node
 };
 class container
 {
-public:
-	int kol;
-	int n;
-	node** mas;
-	container();
-	~container() { Clear(); };
-	void Clear();
-	void In(ifstream & f1);
-	void Out(ofstream & f2);
-	void OutFeature(ofstream & f2);
-	void OutCartoon(ofstream & f2);
-	void OutDocumental(ofstream & f2);
-	void Sort();
+	public:
+		int kol;
+		int n;
+		node** mas;
+		container();
+		~container() { Clear(); };
+		void Clear();
+		void In(ifstream & f1);
+		void Out(ofstream & f2);
+		void OutFeature(ofstream & f2);
+		void OutCartoon(ofstream & f2);
+		void OutDocumental(ofstream & f2);
+		void Sort();
 };
 #endif

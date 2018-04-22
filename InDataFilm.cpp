@@ -9,7 +9,8 @@ using namespace std;
 void CheckInputFile(ifstream &ifst);
 void CheckWrongInput(ifstream &ifst);
 
-void film::InData(ifstream &ifst) {
+void film::InData(ifstream &ifst)
+{
 	CheckInputFile(ifst);
 	char t[256];
 	ifst.getline(t, 256);

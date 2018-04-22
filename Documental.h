@@ -8,13 +8,14 @@
 
 using namespace std;
 
-class documental : public film {
-public:
-	int year;
-	// переопределяем интерфейс класса
-	void InData(ifstream &ifst);  // ввод 
-	void Out(ofstream &ofst);     // вывод 
-	void OutDocumental(ofstream &ofst);     // вывод 
-	documental() {} // создание без инициализации.
+class documental : public film
+{
+	public:
+		int year;
+		// переопределяем интерфейс класса
+		void InData(ifstream &ifst);  // ввод 
+		void Out(ofstream &ofst);     // вывод 
+		void OutDocumental(ofstream &ofst);     // вывод 
+		documental() {} // создание без инициализации.
 };
 #endif

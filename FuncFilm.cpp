@@ -6,11 +6,14 @@
 
 using namespace std;
 
-int film::FuncFilm() {
+int film::FuncFilm()
+{
 	char glasnie[] = "aeiouAEIOUàóîûèıÿş¸åÀÓÎÛÈİßŞ¨Å";
 	int kol = 0;
-	for (int i = 0; i < strlen(name); ++i) {
-		if (strchr(glasnie, name[i])) {
+	for (int i = 0; i < strlen(name); ++i)
+	{
+		if (strchr(glasnie, name[i]))
+		{
 			++kol;
 		}
 	}

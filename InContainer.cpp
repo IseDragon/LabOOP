@@ -14,7 +14,8 @@ void container::In(ifstream &ifst)
 	CheckInputFile(ifst);
 	ifst >> kol;
 	CheckWrongInput(ifst);
-	if (kol < 0) {
+	if (kol < 0) 
+	{
 		cerr << "Wrong number of films" << endl;
 		exit(1);
 	}

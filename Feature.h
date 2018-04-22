@@ -8,12 +8,13 @@
 
 using namespace std;
 
-class feature : public film {
-public:
-	char director[256];
-	void InData(ifstream &ifst);  // ввод 
-	void Out(ofstream &ofst);     // вывод 
-	void OutFeature(ofstream &ofst);     // вывод 
-	feature() {} // создание без инициализации.
+class feature : public film 
+{
+	public:
+		char director[256];
+		void InData(ifstream &ifst);  // ввод 
+		void Out(ofstream &ofst);     // вывод 
+		void OutFeature(ofstream &ofst);     // вывод 
+		feature() {} // создание без инициализации.
 };
 #endif
